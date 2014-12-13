@@ -1,0 +1,39 @@
+Relationship,NIBRS.Relationship,Relate.Group
+Mother,Child,Parent
+Father,Child,Parent
+Grandmother,Grandchild,Family
+FamilyAcquaintance,Acquaintance,Known
+Uncle,Other Family Member,Family
+Mother'sBoyfriend,Child of Boyfriend/Girlfriend,Known
+Mother's Friend,Friend,Known
+Father'sGirlfriend,Child of Boyfriend/Girlfriend,Known
+PaternalGrandmother,Grandchild,Family
+Father andMother,Child,Parent
+NA,NA,Unknown
+Neighbor,Neighbor,Known
+Runaway,NA,NA
+Ex Boyfriend,Boyfriend/Girlfriend,Known
+Stranger,Stranger,Stranger
+Acquaintance,Acquaintance,Known
+Aquaintance ofParent,Acquaintance,Known
+Brother,Sibling,Family
+Family Friend,Friend,Known
+Mother's Boyfriend,Child of Boyfriend/Girlfriend,Known
+Friend of Mom,Friend,Known
+Unidentified,Unknown,Unknown
+Babysitter,Babysittee (the baby),Known
+No offender,NA,NA
+Associates ofFather,Friend,Known
+Associate of Mother,Friend,Known
+FamilyFriend/Father'sBest Friend,Friend,Known
+Family Acquaintance,Acquaintance,Known
+Boyfriend,Boyfriend/Girlfriend,Known
+Associate,Acquaintance,Known
+Biological Mother,Child,Parent
+Step-Father,Stepchild,Family
+Friend,Friend,Known
+Father of Friend,Otherwise Known,Known
+Aunt,Other Family Member,Family
+Friend of Family,Friend,Known
+Friend of Family Friend,Friend,Known
+Sister,Sibling,Family

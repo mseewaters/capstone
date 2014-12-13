@@ -1,0 +1,243 @@
+"Victim
+Age","Victim
+Race","Victim
+Gender",Offender Relationship to Victim,Child Harmed/T hreat of Harm,Location,Region,RSO,O- Age,O- Race,O- Gender,"Rural/C
+ity","Missing
+Location","Recovery
+Location",Victim Recovery Status,Motive,Year
+1,Black,Male,Father,,Albany,Northeast,No,27,Black,Male,Rural,Home,,Deceased,False Allegation,2013
+12,White,Female,Unknown,,Buffalo,Northeast,No,20,Black,Male,Rural,School,>10 miles,Alive,Unknown,2013
+1,Black,Male,Neighbor,,Birmingham,SouthEast,No,14,Black,Female,City,Home,,Alive,Intent to Keep/Infant,2013
+,,,Stranger,,,,No,15,Black,Female,,,,,,2013
+8,Black,Female,"Father's
+Girlfriend",No,Birmingham,SouthEast,No,35,Black,Female,Rural,,>10 miles,Alive,Custodial,2013
+15,White,Male,Runaway,,Boston,SouthEast,,,None,,Rural,,,Alive,Runaway,2013
+15,White,Male,Ex Boyfriend,,Boston,SouthEast,,20,White,Male,Rural,Home,,Deceased,Runaway,2013
+2,"Hispani
+c",Male,Stranger,,Boston,SouthEast,,28,"Hispani
+c",Male,Rural,Home,,Alive,Unknown,2013
+16,White,Female,Unknown,,Charlotte,SouthEast,,,"Unkno
+wn","Unknow
+n",Rural,,,Deceased,Unknown,2013
+13,White,Female,Acquaintance,,Charlotte,SouthEast,,20,"Unkno
+wn",Male,City,,,Alive,Unknown,2013
+15,White,Female,Unknown,,Charlotte,SouthEast,,,"Unkno
+wn","Unknow
+n",,,,Missing,Unknown,2013
+1,Black,Female,Stranger,,Charlotte,SouthEast,,,"Unkno
+wn","Unknow
+n",Rural,,,Alive,Unknown,2013
+14,White,Female,Unknown,,Charlotte,SouthEast,,,"Hispani
+c",Female,Rural,"School Bus
+Stop",,Missing,Runaway,2013
+15,White,Female,"Paternal
+Grandmother",No,Cincinnati,Central,No,,"Unkno
+wn",Male,,,,Missing,Custodial,2013
+5,White,Male,Father,"No;
+Threatened harm; High speed chase",Columbia,SouthEast,No,37,White,Male,Rural,Home,>10 miles,Alive,Custodial,2013
+2,White,Female,,,,,,,,,,,,,,2013
+3,Black,Male,Mother,,Cleveland,Central,No,20,Black,Female,City,,>10 miles,Deceased,False Allegation,2013
+1,Black,Male,"Aquaintance of
+Parent",,Cleveland,Central,,,Black,Male,City,Home,,Alive,Ransom,2013
+,,,,,,,,,Black,Male,,,,,,2013
+,,,,,,,,,Black,Male,,,,,,2013
+15,Black,Female,Runaway,,Cleveland,Central,N/A,,"Unkno
+wn","Unknow
+n",Rural,Home,,Alive,Runaway,2013
+14,White,Male,Brother,,Cleveland,Central,No,17,White,Male,City,Home,,Deceased,Unknown,2013
+17,White,Male,Brother,,,,,,,,,,,Deceased,,2013
+12,Black,Male,Mother,No,Cleveland,Central,No,45,Black,Female,City,Home,,Alive,Custodial,2013
+1,White,Female,Stranger,,Cleveland,Central,,24,White,Male,Rural,,,Deceased,False Allegation,2013
+8,White,Male,Father,No,Cleveland,Central,No,36,White,Male,City,,,Alive,Custodial,2013
+14,White,Male,Runaway,,Cleveland,Central,,,,,Rural,,,Alive,Runaway,2013
+4,White,Male,"Mother's
+Boyfriend",,Detroit,Central,,37,White,Male,Rural,,,Alive,None,2013
+5,White,Male,,,,,,,,,,,,Alive,,2013
+1,Other,Male,Family Friend,,Detroit,Central,No,62,Black,Male,City,,>10 miles,Alive,Unknown,2013
+3,Black,Male,Mother's Friend,,Detroit,Central,,27,Black,Female,City,,,Alive,Intent to Keep/Infant,2013
+4,White,Male,Father,"No; Father
+murdered
+Mother",Dallas,"South
+Central",No,42,White,Male,City,Home,>10 miles,Alive,Custodial,2013
+2,"Hispani
+c",Female,Family Friend,,Dallas,"South
+Central",No,42,White,Female,City,,,Deceased,False Allegation,2013
+12,Black,Female,Mother,No,Dallas,"South
+Central",No,43,Black,Female,Rural,,>10 miles,Alive,Custodial,2013
+,"Unkno
+wn",Male,Stranger,,Dallas,"South
+Central",Yes,,Black,Male,City,Home,1-10 miles,Alive,Sexual,2013
+10,White,Female,Stranger,,Denver,West,No,17,White,Male,Rural,Street,1-10 miles,Deceased,Sexual,2013
+11,White,Female,Stranger,,Denver,West,,39,White,Male,Rural,,>10 miles,Alive,Sexual,2013
+,,,,,,,,,,,,,,Alive,,2013
+6,White,Female,Grandmother,No,El Paso,"South
+Central",,47,White,Female,City,,1-10 miles,Alive,Custodial,2013
+14,"Hispani
+c",Female,Acquaintance,,El Paso,"South
+Central",No,19,"Hispani
+c",Male,Rural,,>10 miles,Alive,Sexual,2013
+14,White,Female,Neighbor,,Houston,"South
+Central",No,33,White,Male,Rural,Home,>10 miles,Alive,Sexual,2013
+1,Black,Male,Father,"No;
+Abducted at gunpoint",Houston,"South
+Central",No,26,Black,Male,City,Home,>10 miles,Alive,Custodial,2013
+5,White,Female,Father,,Houston,"South
+Central",No,31,White,Male,Rural,,>10 miles,Alive,,2013
+15,White,Male,Acquaintance,,Houston,South,Yes,19,"Hispani
+c",Male,Rural,,,Missing,Unknown,2013
+8,White,Female,Friend of Mom,,Jacksonville,SouthEast,Yes,56,White,Male,City,Store,,Alive,Sexual,2013
+6,White,Female,Father,No,Jacksonville,SouthEast,"Unkn
+own",45,White,Male,Rural,,,Alive,Custodial,2013
+11,White,Female,,,,,,,,,,,,Alive,,2013
+5,White,Female,Mother's Friend,No,Kansas City,Central,No,35,White,Female,City,,1-10 miles,Alive,Custodial,2013
+1,White,Female,Unknown,,Kansas City,Central,"Unkn
+own",27,White,Male,Rural,,>10 miles,Deceased,Unknown,2013
+12,White,Female,"Family
+Acquaintance",,Kansas City,Central,,34,White,Male,Rural,Park,,Deceased,Sexual,2013
+3,"Hispani
+c",Female,"Mother's
+Boyfriend",No,Los Angeles,West,,26,"Hispani
+c",Male,Rural,,,Alive,Custodial,2013
+10,White,Female,Stranger,,Los Angeles,West,,30,White,Male,Rural,Home,1-10 miles,Alive,Sexual,2013
+17,White,Female,Unidentified,,Los Angeles,West,,15,White,Male,City,,,Deceased,False Allegation,2013
+14,"Hispani
+c",Female,Unknown,,Los Angeles,West,,34,"Hispani
+c",Male,City,,,Missing,Unknown,2013
+9,Black,Male,Unknown,,Los Angeles,West,No,47,Black,Female,City,,>10 miles,Alive,Intent to Keep/Infant,2013
+6,White,Female,Babysitter,,Litte Rock,SouthEast,No,28,White,Male,City,,<1 mile,Deceased,Sexual,2013
+11,Black,Female,N/A,,Miami,SouthEast,"Unkn
+own",28,"Hispani
+c",Female,City,Street,<1 mile,Alive,Sexual,2013
+,,,,,,,,38,"Hispani
+c",Male,,,,,,2013
+2,White,Male,Unknown,,Milwaukee,Central,"Unkn
+own",,,,Rural,Street,<1 mile,Deceased,None,2013
+2,Black,Male,"Family
+Acquaintance",No,"New
+Orleans","South
+Central",,51,Black,Female,City,,>10 miles,Alive,Custodial,2013
+7,Black,Female,Stranger,,"New
+Orleans","South
+Central",,29,"Hispani
+c",Male,Rural,,1-10 miles,Alive,Sexual,2013
+6,Black,Female,Unknown,,"New
+Orleans","South
+Central",,,"Unkno
+wn","Unknow
+n",City,,,Missing,Sexual,2013
+2,White,Female,Father,No,Oklahoma,South,No,40,"Unkno
+wn",Male,Rural,,,Alive,Custodial,2013
+6,Black,Female,Mother,No,Portland,West,No,30,Black,Female,Rural,,,Alive,Custodial,2013
+13,White,Female,,,Pittsburgh,Northeast,,32,White,Male,Rural,,>10 miles,Alive,Sexual,2013
+14,White,Female,Acquaintance,,Pittsburgh,Northeast,No,22,White,Male,City,,<1 mile,Alive,Sexual,2013
+5,Black,Female,Stranger,,Philadelphia,Northeast,No,,Black,Female,City,School,,Alive,Sexual,2013
+3,"Hispani
+c",Male,"Associates of
+Father",,Phoenix,West,No,31,"Hispani
+c",Female,City,Hotel,,Alive,Ransom,2013
+,,,,,,,,38,"Hispani
+c",Female,,,,,,2013
+7,White,Male,Unknown,,Phoenix,West,N/A,,"Unkno
+wn","Unknow
+n",Rural,Home,1-10 miles,Alive,None,2013
+13,Black,Female,Father,"No; Father
+suffered from mental",Phoenix,West,No,37,Black,Male,Rural,Bus Stop,,Alive,Custodial,2013
+16,White,Female,No offender,,Phoenix,West,,,None,None,City,,,Alive,Runaway,2013
+17,Black,Female,No offender,,Richmond,SouthEast,,,None,None,Rural,,,Alive,Runaway,2013
+12,Black,Male,No offender,,Richmond,SouthEast,,,None,None,City,,,Deceased,None,2013
+16,Black,Female,Stranger,,Richmond,SouthEast,No,48,White,Male,Rural,Gas Station,,Missing,Sexual,2013
+13,White,Female,Uncle,No,San Antonio,South,"Unkn
+own",33,White,Male,Rural,Home,,Alive,Custodial,2013
+14,White,Female,,,,,,,,,,,,Alive,,2013
+13,White,Female,Unknown,,Sacramento,West,"Unkn
+own",,Black,Male,Rural,Street,,Deceased,Sexual,2013
+10,White,Male,Stranger,,Sacramento,West,,36,White,Male,Rural,,,Alive,Sexual,2013
+16,White,Female,"Family
+Friend/Father's
+Best Friend",,San Diego,West,No,40,White,Male,City,School,,Alive,Sexual,2013
+6,Black,Male,Father,No,"San
+Fransisco",West,No,29,Black,Male,City,School,,Alive,Custodial,2013
+14,White,Female,None,,"San
+Fransisco",West,,,None,None,Rural,,,Alive,Runaway,2013
+10,White,Female,Stranger,,"San
+Fransisco",West,No,24,White,Male,City,Street,,Alive,Sexual,2013
+,,,,,,,,30,"Unkno
+wn",Male,,,,,,2013
+1,Black,Female,Father,,"San
+Fransisco",West,"Unkn
+own",,"Unkno
+wn","Unknow
+n",City,,,Missing,False Allegation,2013
+6,"Hispani
+c",Male,Stranger,,San Juan,SouthEast,No,,"Hispani
+c",Male,City,Vehicle,,Missing,Ransom,2013
+,,,,,,,,,"Hispani
+c",Male,,,,,,2013
+5,White,Female,Stranger,,St. Louis,Central,Yes,45,White,Male,Rural,Home,,Alive,Sexual,2013
+2,White,Male,"Father and
+Mother","No; Took
+children to Cuba. Broke into
+custodial",Tampa,SouthEast,No,34,White,Female,City,Home,>10 miles,Alive,Custodial,2013
+4,White,Male,,,,,,34,White,Male,,,,Alive,,2013
+14,White,Male,None,,Tampa,SouthEast,,,,None,City,,,Alive,Runaway,2013
+15,White,Female,,,Tampa,SouthEast,,22,White,Male,City,,,Alive,Sexual,2013
+14,White,Female,,,,,,,,,,,,Alive,,2013
+6,White,Female,,,,Southeast,Unknown,39,White,Male,Rural,,,Alive,Sexual,2014
+12,White,Female,,,,,,25,White,Female,,,,,,2014
+5,White ,Female,,,,West,,,U,U,,,,Unknown,Unknown,2014
+1,Black,Male,Father,,,Southeast,No,36,Black,Male,Suburban,Victim's home,>10 miles,Alive,Custodial,2014
+3,Black,Female,,,,,,,,,,,,,,2014
+17,Asian,Female,Associate ,,,Northeast,U,,Asian,Male,,,,Alive,Sexual,2014
+2,Black,Female,Mother,,,Northeast,No,,Black,Female,,,,Alive,Custodial,2014
+4,Black,Female,,,,,,,,,,,,Alive,,2014
+15,Black,Female,,,,Northeast,,42,White,Male,,,,Alive,,2014
+14,White,Female,,,,Northeast,,34,White,Male,,,,Alive,,2014
+3,Unknown,Female,Father,,,Northeast,No,,Unknown,Male,City,,,Alive,Custodial,2014
+15,Other ,Female,Boyfriend,,,Central,,31,Other ,Male,Rural,Parking lot; Recovered Same location as abductor,1-10 miles,Alive,Unknown,2014
+17,Unknown,Female,Stranger,,,Central,Unknown,18,Unknown,Male,,,,Alive,Unknown,2014
+13,White,Female,Friend,,,Central,Unknown,22,White,Male,City,,,Alive,Unknown,2014
+4,Unknown,Female,Mother,,,Central,Unknown,38,Unknown,Female,,,,Alive,Custodial,2014
+2,White,Female,Father,,,West,Unknown,33,White,Male,,,,Deceased,Custodial,2014
+3,White,Male,,,,,,,,,,,,Deceased,,2014
+5,White,Male,,,,,,,,,,,,Deceased,,2014
+6,White,Male,,,,,,,,,,,,Deceased,,2014
+7,White,Female,,,,,,,,,,,,Deceased,,2014
+2,White,Female,U,,,Central,N/A,,U,U,Rural,Home,1-10 miles,Alive,U,2014
+2,Black,Male,,,,Central,,,,,Rural,,1-10 miles,Alive,Possible false allegation,2014
+0.5,White,Female,Stranger,,,Central,,52,White,Male,Suburban,,<1 mile,Alive,,2014
+0.5,Black,Female,Father,,,Central,Unknown,20,Black,Male,City,,,Alive,Custodial,2014
+,,,Friend of Father,,,,Unknown,19,Black,Male,,,,,,2014
+2,Black,Female,Father,,,Central,Unknown,22,Black,Male,City,,,Alive,Custodial,2014
+6,Black,Female,Step-Father,,,Central,Unknown,28,Black,Male,,,,Missing,,2014
+0.5,Black,Male,Father,,,,,,,,,,,Missing,,2014
+12,Black,Male,Unknown,,,Central,,,Unknown,Unknown,City,,,Missing,Unknown,2014
+6,White,Female,Stranger,,,Central,,45,White,Male,Rural,,,Alive,,2014
+,Hispanic,Male,Associate of Mother,,,Central,Unknown,,Hispanic,Male,,,,Alive,Unknown,2014
+,Hispanic,Male,,,,,,,,,,,,Alive,,2014
+,Hispanic,Male,,,,,,,,,,,,Alive,,2014
+5,White,Female,Mother's Boyfriend,,,Central,,30,Black ,Male,City,,>10 miles,Deceased,Custodial,2014
+,,,,,,Central,,,,,,,,Deceased,,2014
+,,,,,,Central,,,,,,,,,,2014
+13,Black,Female,Stranger,,,Southeast,Yes,76,White,Male,City,Gas Station/Convinient Store,Attempted,Alive,Sexual,2014
+2,Native American,Male,Aunt ,,,West,,19,Native American,Female,,,,Alive,,2014
+8,White,Female,Family Acquaintance ,,,West,,26,White,Male,Suburban,,<1 mile,Deceased,Sexual,2014
+5,Black,Female,Aunt ,,,Northeast,No,21,Black,Female,City,,,,Unknown,2014
+5,White,Male,Biological Mother,,,West,No,36,White,Female,,,,Alive,Custodial,2014
+7,White,Male,,,,,,,,,,,,,,2014
+3,Hispanic,Female,Stranger,,,West,Unknown,,Hispanic,U,,,,Missing,Unknown,2014
+16,White,Female,Friend of Family,,,West,No,40,White,Male,City,,>10 miles,Alive,Sexual,2014
+2,Unknown,Male,Father,,,West,Unknown,45,Unknown,Male,City,,,Alive,Custodial,2014
+5,White ,Male,Father,,,West,Unknown,31,White,Male,City,,1-10 miles,Alive,Custodial,2014
+,,,Mother,,,,Unknown,36,White,Female,,,,,,2014
+0.5,White,Male,Mother,,,West,No,31,White,Female,,,,Alive,Custodial,2014
+2,Black,Male,Mother,,,West,No,25,Black,Female,,,,Alive,Custodial,2014
+1,Black,Female,,,,,,,,,,,,,,2014
+7,Asian,Female,Stranger,,,West,Unknown,40,White,Male,,,,Alive,Sexual,2014
+13,White,Female,Sister,,,West,No,27,White,Female,,,>10 miles,Alive,Unidentified ,2014
+17,White,Female,,,,,,32,White ,Male,,,,Alive,,2014
+,,,,,,,,19,White,Female,,,,Alive,,2014
+,,,,,,,,21,White,Female,,,,Alive,,2014
+14,White,Female,Stranger,,,Southeast,Yes,25,White,Male,,,,Alive,Sexual,2014
+9,Black,Female,Friend of Family Friend,,,Southeast,No,35,Black,Male,City,,,Deceased,Sexual,2014
+16,White,Female,Father of Friend,,,Southeast,Yes,41,White,Male,,,,Alive,Sexual,2014
+4,Unknown,Male,Father,,,Southeast,No,28,Unknown,Male,,,,Alive,Custodial,2014
