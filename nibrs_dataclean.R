@@ -32,14 +32,15 @@ data1 <- data.raw
 m <- data1[,c("V40181","V40182","V40183")]
 data1$agemax <- apply(m,1,max,na.rm=TRUE)
 
-data.c <- subset(data1, agemax <= 15 & V50071 >= 16 & V40321 %in% c(4,5,7,10,11,12,14,15,16,17,19,24,25), na.rm=TRUE)
-data.c <- subset(data1, agemax <= 20 & V50071 >= 1 & V40321 %in% c(4,5,7,10,11,12,14,15,16,17,19,24,25), na.rm=TRUE)
+data.c <- subset(data1, agemax <= 15 & V50071 >= 16 & V40321 %in% c(4,5,7,10,11,12,14,15,16,17,19,24,25,-9,-8,-7), na.rm=TRUE)
 
 #Change "Force" values other and none to smaller values
 data.c$V20171[which(data.c$V20171>=900)] <- 1
 
 #Recode victim is sibling to 9 to help with aggregation later
 data.c$V40321[which(data.c$V40321==4)] <- 9
+#Recode victim is step-child to 4 to help with aggregation later
+data.c$V40321[which(data.c$V40321==10)] <- 4
 
 # Set up target variable
 # Definition - any injury, even minor, any weapon even personal
@@ -49,11 +50,12 @@ data.c$target <- ifelse(((data.c$V40261<=2) & (data.c$V20171==400 | data.c$V2017
                         ifelse((data.c$V40261>=3 | (data.c$V20171>100 & data.c$V20171<900) | (data.c$V20062>110 & data.c$V20062<133)), 2, 0))
 sum(data.c$target)
 
-#check <- data.c[,c('V40261','V20171','V20062','target')]
 
-#Filter abduction incidents
+# Filter abduction incidents
 data.100 <- subset(data.c, V20061==100 | V20062==100 | V20063==100)
-data.100 <- subset(data.c, V20061<200 & V20062<200 & V20063<200)
+
+# Filter for all major crimes
+# data.100 <- subset(data.c, V20061<200 & V20062<200 & V20063<200)
 
 
 # Reclass variety of unknowns to NA
@@ -76,7 +78,7 @@ data$VNumOG <- as.factor(ifelse(!is.na(data$V40331), "Multiple Offenders", "Sing
 
 data.t <- data[,-which(names(data) %in% x[1:36,1])]
 
-data.t$V20111G <- as.factor(ifelse(data.t$V20111 == 20, "Home", ifelse((data.t$V20111 == 44 | data.t$V20111 == 53 | data.t$V20111 == 57), "School","Other")))
+data.t$V20111G <- as.factor(ifelse(data.t$V20111 == 20, "Home", ifelse((data.t$V20111 == 44 | data.t$V20111 == 52 | data.t$V20111 == 53 | data.t$V20111 == 57 | data.t$V20111 == 22), "School/Center","Other")))
 
 data.t$V40181G <- cut(data.t$V40181, 
                       breaks=c(-0.5,5.5,10.5,Inf), 
@@ -91,8 +93,8 @@ data.t$V50071G <- cut(data.t$V50071,
 table(data.t$V50071G)
 
 data.t$B2005G <- cut(data.t$B2005,
-                     quantile(data.t$B2005,probs=seq(0,1,0.25)), 
-                     labels=c('Pop1','Pop2','Pop3','Pop4'))
+                     breaks=c(0,25000,100000,500000,Inf), 
+                     labels=c('Pop <25K','Pop 25-100K','Pop 100-500K','Pop >500K'))
 
 table(data.t$B2005G)
 
@@ -104,7 +106,9 @@ table(data.t$V40321G)
 
 data.t$V1007G <- cut(data.t$V1007,
                      breaks=c(-1,1,6,12,18,Inf), 
-                     labels=c('Night1','Early','Morning','Afternoon','Night2'))
+                     labels=c('Night','Early','Morning','Afternoon','Night2'))
+#Recode Night2 to Night
+data.t$V1007G[which(data.t$V1007G=='Night2')] <- 'Night'
 
 table(data.t$V1007G)
 xtabs(target~V1007G, data.t)
@@ -112,12 +116,12 @@ xtabs(target~V1007G, data.t)
 check <- nrow(data[!complete.cases(data.t),])
 
 write.csv(data.t, file="abduction_cleaned_coded.csv")
-write.csv(data.t, file="semifiltered_cleaned_coded.csv")
+# write.csv(data.t, file="allcrime_cleaned_coded.csv")
 
 # Break to clear memory ---------------------------------------------------
 
-data.t <- read.csv("D:/0 Stern MSBA/0.2 Abduction/abduction2/abduction_cleaned_coded.csv")
-data.t <- read.csv("D:/0 Stern MSBA/0.2 Abduction/abduction2/semifiltered_cleaned_coded.csv")
+data.t <- read.csv("abduction_cleaned_coded.csv")
+# data.t <- read.csv("allcrime_cleaned_coded.csv")
 
 data.graph <- data.t[,-which(names(data.t) %in% c('X','SEGMENT','V40311','agemax'))]
 colnames(data.graph)
@@ -170,47 +174,20 @@ data.final <- data.merge[,-which(names(data.merge) %in% c('relationship','injury
                                                           'country.region', 'country.division','population.group',
                                                           'state','report.date'))]
 
-write.csv(data.final, file="NIBRS_abduction_cleaned_forgraphing.csv")
-write.csv(data.final, file="NIBRS_semifiltered_cleaned_forgraphing.csv")
-table(data.merge$completed)
+write.csv(data.final, file="NIBRS_cleaned_notfilled.csv")
+# write.csv(data.final, file="NIBRS_allcrime_notfilled.csv")
+
 
 xtabs(target.harm~UCR.code, data.final)
+
+
+# create data and rates by ori and fips --------------------------------------------
+
 
 library(plyr)
 ori.pop <- ddply(data.raw, ~ORI,summarise,mean=mean(B2005))
 write.csv(ori.pop, file="ori_pop.csv")
 
+fips.rates <- as.data.frame.matrix(table(data.final$FIPS, data.final$UCR.code))
+write.csv(fips.rates, file="crime_by_fips.csv")
 
-library(DMwR)
-library(performanceEstimation)
-library(rpart)
-
-data.m <- data.final[,c('current.population','hour.group','victim.age','victim.sex',
-                        'victim.race','victim.residency','offender.age','offender.sex',
-                        'offender.race','multiple.victims','multiple.offenders',
-                        'relationship.group','division.name','location.group','target.harm')]
-
-# Fill others
-data.m <- centralImputation(data.m)
-
-#Force to binary target
-data.m$target.harm[which(data.m$target.harm==1)] <- 0
-data.m$target.harm[which(data.m$target.harm==2)] <- 1
-sum(data.m$target.harm)
-
-data.m$target.harm <- as.factor(data.m$target.harm)
-data.smote <- SMOTE(target.harm ~ ., data.m, perc.over = 150)
-table(data.smote$target.harm)
-
-model.tree <- rpart(target.harm ~ ., data=data.m, method="class")
-#pred.tree <- predict(model.tree, data.m, type="class")
-prettyTree(model.tree, cex=0.9, margin=0.05, compress=TRUE, fheight=.2, fwidth=.5)
-
-model.tree <- rpart(target.harm ~ ., data=data.smote, method="class")
-#pred.tree <- predict(model.tree, data.m, type="class")
-prettyTree(model.tree, cex=.85, margin=0.01, compress=TRUE, fheight=.2, fwidth=.3)
-
-
-printcp(model.tree)
-classificationMetrics(data.m$target,pred.tree,stats=c("rec","prec","F"))
-table(data.m$target,pred.tree)
