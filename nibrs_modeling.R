@@ -81,16 +81,21 @@ data.m2$target.harm <- as.factor(data.m2$target.harm)
 data.m3 <- centralImputation(data.m3)
 data.m3$target.harm <- as.factor(data.m3$target.harm)
 
+data.smote.f <- SMOTE(target.harm ~ ., data.m, perc.over = 100)
+model.rf <- randomForest(target.harm ~ ., data=data.smote.f, ntree=500, nodesize=2)
+opt1.imp <- as.data.frame(importance(model.rf))
+opt1.imp <- opt1.imp[order(-opt1.imp$MeanDecreaseGini),,drop=FALSE]
+
 #ROC curve for RF
 library(ROCR)
-data.smote.f <- SMOTE(target.harm ~ ., data.m, perc.over = 100)
+data.smote.f <- SMOTE(target.harm ~ ., data.m3, perc.over = 100)
 
 trPerc = .8
 idx2 <- sample(1:nrow(data.smote.f),as.integer(trPerc*nrow(data.smote.f)))
 train <- data.smote.f[idx2,]
 test <- data.smote.f[-idx2,]
 
-model.svm <- svm(target.harm ~ ., data=train,probability=TRUE, cost=1, gamma=0.5)
+model.svm <- svm(target.harm ~ ., data=train,probability=TRUE, cost=1, gamma=0.1)
 pr.svm <- predict(model.svm,test[,-ncol(test)], probability=TRUE)
 svm.pred <- prediction(1-attr(pr.svm,"probabilities")[,2], test$target.harm)
 svm.perf <- performance(svm.pred,"tpr","fpr")
@@ -119,8 +124,7 @@ nb.perf <- performance(nb.pred,"tpr","fpr")
 
 plot(nb.perf,col=5,lwd=2, add=TRUE)
 
-abline(a=0,b=1,lwd=2,lty=2,col="gray")
-legend(0.7, 0.4, c('Random Forest','svm','adaBoost','Naive Bayes','bagging','rpart'), 2:7)
+
 
 model.bag <- bagging(target.harm ~ ., data=train)
 pr.bag <- predict(model.bag,type="prob",test[,-ncol(test)])[,2]
@@ -136,6 +140,8 @@ ct.perf <- performance(ct.pred,"tpr","fpr")
 
 plot(ct.perf,col=7,lwd=2, add=TRUE)
 
+abline(a=0,b=1,lwd=2,lty=2,col="gray")
+legend(0.7, 0.4, c('Random Forest','svm','adaBoost','Naive Bayes','bagging','rpart'), 2:7)
 
 #compute area under curve
 auc <- performance(rf.pred,"auc")
@@ -242,7 +248,7 @@ res1 <- performanceEstimation(
 plot(res1)
 
 res2 <- performanceEstimation(
-  PredTask(target.harm ~ ., data.smote.f),
+  PredTask(target.harm ~ ., data.smote.f3),
   c(workflowVariants("standardWF", learner = "ada", learner.pars=list(loss = c('exponential','logistic'), type = c('discrete','real','gentle')),
                      evaluator.pars=list(stats=c("rec","prec","F"), posClass='1')),
     workflowVariants("standardWF", learner = "svm",
@@ -283,12 +289,12 @@ for (i in 1:10)
   test <- data.smote[-idx2,]
   
   # svm model evaluation and holdout analysis (non-sampled data)
-  model.svm <- svm(target.harm ~ ., data=train, cost=1, gamma=0.5)
+  model.svm <- svm(target.harm ~ ., data=train, cost=1, gamma=0.1)
   pred.svm <- predict(model.svm, test[,-ncol(test)])
   classificationMetrics(test$target.harm,pred.svm,stats=c("rec","prec","F"), posClass='1')
   table(test[,ncol(test)], pred.svm)
   
-  model.svm <- svm(target.harm ~ ., data=data.smote, cost=1, gamma=0.5)
+  model.svm <- svm(target.harm ~ ., data=data.smote, cost=1, gamma=0.1)
   pred.svm <- predict(model.svm, holdout[,-ncol(holdout)])
   print(classificationMetrics(holdout$target.harm,pred.svm,stats=c("rec","prec","F"), posClass='1'))
   output[1,i] <- classificationMetrics(holdout$target.harm,pred.svm,stats=c("rec","prec","F"), posClass='1')[1]
@@ -325,3 +331,27 @@ for (i in 1:10)
   print(table(holdout[,ncol(holdout)], pred.all))
 }
 importance(model.rf)
+
+
+# Time to arrest ----------------------------------------------------------
+
+data.a <- data.final[,c('current.population','incident.hour','victim.age','victim.sex',
+                        'victim.race','victim.residency','offender.age','offender.sex',
+                        'offender.race','multiple.victims','multiple.offenders',
+                        'relationship.group','division.name','loc.group','same.race','target.arrest')]
+data.a <- data.a[!is.na(data.a$target.arrest),]
+
+data.a <- centralImputation(data.a)
+
+
+trPerc = .80
+idx <- sample(1:nrow(data.a),as.integer(trPerc*nrow(data.a)))
+
+train <- data.a[idx,]
+test <- data.a[-idx,]
+
+# svm model evaluation and holdout analysis (non-sampled data)
+model.svm <- randomForest(target.arrest ~ ., data=train)
+pred.svm <- round(predict(model.svm, test[,-ncol(test)]),1)
+regressionMetrics(test$target.arrest,pred.svm,stats=c("mse"))
+time.arrest <- cbind(test$target.arrest,pred.svm)
