@@ -1,0 +1,165 @@
+incident.number,incident.date,public,city,state,division.name,rural.city,rec.location,motive,victim.age,victim.race,victim.sex,RSO,offender.age,offender.race,offender.sex,Victim.in.relation,multiple.victims,multiple.offenders,type,target.harm,exclude,primary.incident,relationship.group,same.race
+13-2,2013-05-01,Yes,Buffalo,NY,Northeast,Rural,>10 miles,Unknown,12,White,Female,No,20,Black,Male,Unknown,1,1,SingleVO,No,0,Yes,,0
+13-3,2013-06-01,Yes,Birmingham,AL,Southeast,City,,Intent to Keep,1,Black,Male,No,14,Black,Female,Neighbor,1,2,MultOff,No,0,Yes,Known,1
+13-3,2013-06-01,Yes,Birmingham,AL,Southeast,City,,Intent to Keep,1,Black,Male,No,15,Black,Female,Stranger,1,2,MultOff,No,0,No,Stranger,1
+13-4,2013-08-01,Yes,Birmingham,AL,Southeast,Rural,>10 miles,Custodial,8,Black,Female,No,35,Black,Female,Child of Boyfriend/Girlfriend,1,1,SingleVO,No,0,Yes,Known,1
+13-7,2013-08-01,Yes,Boston,MA,Southeast,Rural,,Unknown,2,Hispanic,Male,,28,Hispanic,Male,Stranger,1,1,SingleVO,No,0,Yes,Stranger,1
+13-8,2012-12-01,Yes,Charlotte,NC,Southeast,Rural,,Unknown,16,White,Female,,,Unknown,Unknown,Unknown,1,1,SingleVO,Yes,0,Yes,,
+13-9,2013-05-01,Yes,Charlotte,NC,Southeast,City,,Unknown,13,White,Female,,20,Unknown,Male,Acquaintance,1,1,SingleVO,No,0,Yes,Known,
+13-10,2013-08-01,Yes,Charlotte,NC,Southeast,,,Unknown,15,White,Female,,,Unknown,Unknown,Unknown,1,1,SingleVO,No,0,Yes,,
+13-11,2013-08-01,Yes,Charlotte,NC,Southeast,Rural,,Unknown,1,Black,Female,,,Unknown,Unknown,Stranger,1,1,SingleVO,No,0,Yes,Stranger,
+13-13,2013-04-01,No,Cincinnati,OH,Central,,,Custodial,15,White,Female,No,,Unknown,Male,Grandchild,1,1,SingleVO,No,0,Yes,Family,
+13-14,2012-12-01,Yes,Columbia,SC,Southeast,Rural,>10 miles,Custodial,5,White,Male,No,37,White,Male,Child,2,1,MultVic,Yes,0,Yes,Parent,1
+13-14,2012-12-01,Yes,Columbia,SC,Southeast,Rural,>10 miles,Custodial,2,White,Female,No,37,White,Male,Child,2,1,MultVic,Yes,0,No,Parent,1
+13-16,2012-12-01,Yes,Cleveland,OH,Central,City,,Ransom,1,Black,Male,,,Black,Male,Otherwise Known,1,1,SingleVO,No,0,Yes,Known,1
+13-18,2013-05-01,Yes,Cleveland,OH,Central,City,,Unknown,14,White,Male,No,17,White,Male,Sibling,2,1,MultVic,Yes,0,Yes,Family,1
+13-18,2013-05-01,Yes,Cleveland,OH,Central,City,,Unknown,17,White,Male,No,17,White,Male,Sibling,2,1,MultVic,Yes,0,No,Family,1
+13-19,2013-05-01,No,Cleveland,OH,Central,City,,Custodial,12,Black,Male,No,45,Black,Female,Child,1,1,SingleVO,No,0,Yes,Parent,1
+13-77,2013-07-01,Yes,Cleveland,OH,Central,CIty,,Custodial,8,White,Male,No,36,White,Male,Child,1,1,SingleVO,No,0,Yes,Parent,1
+13-21,2012-12-01,No,Detroit,MI,Central,Rural,,None,4,White,Male,,37,White,Male,Child of Boyfriend/Girlfriend,2,1,MultVic,No,0,Yes,Known,1
+13-21,2012-12-01,No,Detroit,MI,Central,Rural,,None,5,White,Male,,37,White,Male,Child of Boyfriend/Girlfriend,2,1,MultVic,No,0,No,Known,1
+13-22,2013-03-01,No,Detroit,MI,Central,City,>10 miles,Unknown,1,Other,Male,No,62,Black,Male,Otherwise Known,1,1,SingleVO,No,0,Yes,Known,0
+13-23,2013-09-01,Yes,Detroit,MI,Central,City,,Intent to Keep,3,Black,Male,,27,Black,Female,Otherwise Known,1,1,SingleVO,No,0,Yes,Known,1
+13-24,2012-11-01,Yes,Dallas,TX,South Central,City,>10 miles,Custodial,4,White,Male,No,42,White,Male,Child,1,1,SingleVO,Yes,0,Yes,Parent,1
+13-26,2013-04-01,Yes,Dallas,TX,South Central,Rural,>10 miles,Custodial,12,Black,Female,No,43,Black,Female,Child,1,1,SingleVO,No,0,Yes,Parent,1
+13-27,2013-05-01,Yes,Dallas,TX,South Central,City,1-10 miles,Sexual,,Unknown,Male,Yes,,Black,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,
+13-28,2012-10-01,Yes,Denver,CO,West,Rural,1-10 miles,Sexual,10,White,Female,No,17,White,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,1
+13-29,2012-10-01,Yes,Denver,CO,West,Rural,>10 miles,Sexual,11,White,Female,,39,White,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,1
+13-30,2012-10-01,No,El Paso,TX,South Central,City,1-10 miles,Custodial,6,White,Female,,47,White,Female,Grandchild,1,1,SingleVO,No,0,Yes,Family,1
+13-31,2012-11-01,No,El Paso,TX,South Central,Rural,>10 miles,Sexual,14,Hispanic,Female,No,19,Hispanic,Male,Acquaintance,1,1,SingleVO,Yes,0,Yes,Known,1
+13-32,2013-01-01,Yes,Houston,TX,South Central,Rural,>10 miles,Sexual,14,White,Female,No,33,White,Male,Neighbor,1,1,SingleVO,Yes,0,Yes,Known,1
+13-33,2013-07-01,Yes,Houston,TX,South Central,City,>10 miles,Custodial,1,Black,Male,No,26,Black,Male,Child,1,1,SingleVO,Yes,0,Yes,Parent,1
+13-34,2013-07-01,No,Houston,TX,South Central,Rural,>10 miles,,5,White,Female,No,31,White,Male,Child,1,1,SingleVO,No,0,Yes,Parent,1
+13-35,2013-07-01,Yes,Houston,TX,South Central,Rural,,Unknown,15,White,Male,Yes,19,Hispanic,Male,Acquaintance,1,1,SingleVO,No,0,Yes,Known,0
+13-36,2013-06-01,Yes,Jacksonville,MS,Southeast,City,,Sexual,8,White,Female,Yes,56,White,Male,Otherwise Known,1,1,SingleVO,Yes,0,Yes,Known,1
+13-37,2013-09-01,Yes,Jacksonville,MS,Souheast,Rural,,Custodial,6,White,Female,,45,White,Male,Child,2,1,MultVic,No,0,Yes,Parent,1
+13-37,2013-09-01,Yes,Jacksonville,MS,Souheast,Rural,,Custodial,11,White,Female,,45,White,Male,Child,2,1,MultVic,No,0,No,Parent,1
+13-38,2013-04-01,Yes,Kansas City,MO,Central,City,1-10 miles,Custodial,5,White,Female,No,35,White,Female,Otherwise Known,1,1,SingleVO,No,0,Yes,Known,1
+13-39,2013-05-01,Yes,Kansas City,MO,Central,Rural,>10 miles,Unknown,1,White,Female,,27,White,Male,Unknown,1,1,SingleVO,Yes,0,Yes,,1
+13-40,2013-08-01,Yes,Kansas City,MO,Central,Rural,,Sexual,12,White,Female,,34,White,Male,Otherwise Known,1,1,SingleVO,Yes,0,Yes,Known,1
+13-41,2012-12-01,Yes,Los Angeles,CA,West,Rural,,Custodial,3,Hispanic,Female,,26,Hispanic,Male,Child of Boyfriend/Girlfriend,1,1,SingleVO,No,0,Yes,Known,1
+13-42,2013-05-01,Yes,Los Angeles,CA,West,Rural,1-10 miles,Sexual,10,White,Female,,30,White,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,1
+13-44,2013-08-01,No,Los Angeles,CA,West,City,,Unknown,14,Hispanic,Female,,34,Hispanic,Male,Unknown,1,1,SingleVO,No,0,Yes,,1
+13-45,2013-09-01,No,Los Angeles,CA,West,City,>10 miles,Intent to Keep,9,Black,Male,No,47,Black,Female,Unknown,1,1,SingleVO,No,0,Yes,,1
+13-46,2013-01-01,Yes,Litte Rock,AR,Southeast,City,<1 mile,Sexual,6,White,Female,No,28,White,Male,Babysittee (the baby),1,1,SingleVO,Yes,0,Yes,Known,1
+13-47,2013-06-01,No,Miami,FL,Souheast,City,<1 mile,Sexual,11,Black,Female,,28,Hispanic,Female,Unknown,1,2,MultOff,Yes,0,Yes,,0
+13-47,2013-06-01,No,Miami,FL,Souheast,City,<1 mile,Sexual,11,Black,Female,,38,Hispanic,Male,Unknown,1,2,MultOff,Yes,0,No,,0
+13-48,2013-07-01,Yes,Milwaukee,WI,Central,Rural,<1 mile,None,2,White,Male,,,,,Unknown,1,1,SingleVO,Yes,0,Yes,,
+13-49,2013-02-01,No,New Orleans,LA,South Central,City,>10 miles,Custodial,2,Black,Male,,51,Black,Female,Otherwise Known,1,1,SingleVO,No,0,Yes,Known,1
+13-50,2013-06-01,No,New Orleans,LA,South Central,Rural,1-10 miles,Sexual,7,Black,Female,,29,Hispanic,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,0
+13-51,2013-07-01,Yes,New Orleans,LA,South Central,City,,Sexual,6,Black,Female,,,Unknown,Unknown,Unknown,1,1,SingleVO,Yes,0,Yes,,
+13-52,2013-03-01,No,Oklahoma City,OK,South Central,Rural,,Custodial,2,White,Female,No,40,Unknown,Male,Child,1,1,SingleVO,No,0,Yes,Parent,
+13-53,2013-04-01,Yes,Portland,OR,West,Rural,,Custodial,6,Black,Female,No,30,Black,Female,Child,1,1,SingleVO,No,0,Yes,Parent,1
+13-54,2013-03-01,Yes,Pittsburgh,PA,Northeast,Rural,>10 miles,Sexual,13,White,Female,,32,White,Male,Unknown,1,1,SingleVO,Yes,0,Yes,,1
+13-55,2013-09-01,Yes,Pittsburgh,PA,Northeast,City,<1 mile,Sexual,14,White,Female,No,22,White,Male,Acquaintance,1,1,SingleVO,Yes,0,Yes,Known,1
+13-56,2013-05-01,Yes,Philadelphia,PA,Northeast,City,,Sexual,5,Black,Female,No,,Black,Female,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,1
+13-57,2012-11-01,Yes,Phoenix,AZ,West,City,,Ransom,3,Hispanic,Male,No,31,Hispanic,Female,Otherwise Known,1,2,MultOff,No,0,Yes,Known,1
+13-57,2012-11-01,Yes,Phoenix,AZ,West,City,,Ransom,3,Hispanic,Male,,38,Hispanic,Female,Unknown,1,2,MultOff,No,0,No,,1
+13-58,2013-01-01,No,Phoenix,AZ,West,Rural,1-10 miles,None,7,White,Male,,,Unknown,Unknown,Unknown,1,1,SingleVO,No,0,Yes,,
+13-59,2013-01-01,Yes,Phoenix,AZ,West,Rural,,Custodial,13,Black,Female,No,37,Black,Male,Child,1,1,SingleVO,No,0,Yes,Parent,1
+13-62,,,Richmond,VA,Souheast,City,,None,12,Black,Male,,,None,None,Exclude,1,1,SingleVO,Yes,0,Yes,,0
+13-64,2013-05-01,Yes,San Antonio,TX,South Central,Rural,,Custodial,13,White,Female,,33,White,Male,Other Family Member,1,1,SingleVO,No,0,Yes,Family,1
+13-65,2013-05-01,Yes,Sacramento,CA,West,Rural,,Sexual,13,White,Female,,,Black,Male,Unknown,1,1,SingleVO,Yes,0,Yes,,0
+13-66,2013-06-01,Yes,Sacramento,CA,West,Rural,,Sexual,10,White,Male,,36,White,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,1
+13-68,2013-02-01,No,San Fransisco,CA,West,City,,Custodial,6,Black,Male,No,29,Black,Male,Child,1,1,SingleVO,No,0,Yes,Parent,1
+13-70,2013-07-01,Yes,San Fransisco,CA,West,City,,Sexual,10,White,Female,No,24,White,Male,Stranger,1,2,MultOff,Yes,0,Yes,Stranger,1
+13-70,2013-07-01,Yes,San Fransisco,CA,West,City,,Sexual,10,White,Female,,30,Unknown,Male,Unknown,1,2,MultOff,Yes,0,No,,
+13-72,2012-10-01,Yes,San Juan,PR,Southeast,City,,Ransom,6,Hispanic,Male,No,,Hispanic,Male,Stranger,1,2,MultOff,No,0,Yes,Stranger,1
+13-72,2012-10-01,Yes,San Juan,PR,Southeast,City,,Ransom,6,Hispanic,Male,,,Hispanic,Male,Unknown,1,2,MultOff,No,0,No,,1
+13-73,2012-10-01,Yes,St. Louis,MO,Central,Rural,,Sexual,5,White,Female,Yes,45,White,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,1
+13-74,2013-04-01,Yes,Tampa,FL,Southeast,City,>10 miles,Custodial,2,White,Male,No,34,White,Female,Child,2,2,MultOV,No,0,Yes,Parent,1
+13-74,2013-04-01,Yes,Tampa,FL,Southeast,City,>10 miles,Custodial,4,White,Male,No,34,White,Female,Child,2,2,MultOV,No,0,No,Parent,1
+13-76,2013-05-01,Yes,Tampa,FL,Southeast,City,,Sexual,15,White,Female,,22,White,Male,Unknown,2,1,MultVic,Yes,0,Yes,,1
+13-76,2013-05-01,Yes,Tampa,FL,Southeast,City,,Sexual,14,White,Female,,22,White,Male,Unknown,2,1,MultVic,Yes,0,No,,1
+13-74,2013-04-01,Yes,Tampa,FL,Southeast,City,>10 miles,Custodial,2,White,Male,,34,White,Male,Child,2,2,MultOV,No,0,No,Parent,1
+13-74,2013-04-01,Yes,Tampa,FL,Southeast,City,>10 miles,Custodial,4,White,Male,,34,White,Male,Child,2,2,MultOV,No,0,No,Parent,1
+14-1,2014-08-01,Yes,Alabama,AL,Southeast,Rural,,Sexual,6,White,Female,,39,White,Male,,2,2,MultOV,Yes,0,Yes,,1
+14-1,2014-08-01,Yes,Alabama,AL,Southeast,Rural,,Sexual,12,White,Female,,39,White,Male,,2,2,MultOV,Yes,0,No,,1
+14-2,2014-06-01,Yes,Anchorage,AK,West,,,Unknown,5,White,Female,,,,,,1,1,SingleVO,No,0,Yes,,
+14-3,2014-09-01,Yes,Atlanta,GA,Southeast,Suburban,>10 miles,Custodial,1,Black,Male,No,36,Black,Male,Child,2,1,MultVic,No,0,Yes,Parent,1
+14-3,2014-09-01,Yes,Atlanta,GA,Southeast,Suburban,>10 miles,Custodial,3,Black,Female,No,36,Black,Male,Child,2,1,MultVic,No,0,No,Parent,1
+14-5,2014-09-01,No,Baltimore,MD,Northeast,,,Custodial,2,Black,Female,No,,Black,Female,Child,2,1,MultVic,No,0,Yes,Parent,1
+14-5,2014-09-01,No,Baltimore,MD,Northeast,,,Custodial,4,Black,Female,No,,Black,Female,Child,2,1,MultVic,No,0,No,Parent,1
+14-6,2014-09-01,Yes,Baltimore,MD,Northeast,,,,15,Black,Female,,42,White,Male,,1,1,SingleVO,No,0,Yes,,0
+14-7,2013-10-01,Yes,Boston,MA,Northeast,,,,14,White,Female,,34,White,Male,,1,1,SingleVO,No,0,Yes,,1
+14-8,2014-03-01,No,Boston,MA,Northeast,City,,Custodial,3,Unknown,Female,No,,,Male,Child,1,1,SingleVO,No,0,Yes,Parent,
+14-82,,No,Cleveland,OH,Central,Rural,1-10 miles,Intent to Keep,15,Other,Female,,31,Other,Male,Boyfriend/Girlfriend,1,1,SingleVO,No,0,Yes,Known,1
+14-10,2014-09-01,Yes,Cleveland,OH,Central,City,,Unknown,13,White,Female,,22,White,Male,Friend,1,1,SingleVO,No,0,Yes,Known,1
+14-11,2014-03-01,Yes,Cinncinatti,OH,Central,,,Custodial,4,Unknown,Female,,38,,Female,Child,1,1,SingleVO,No,0,Yes,Parent,
+14-12,2014-09-01,Yes,Columbia,SC,Southeast,,,Custodial,2,White,Female,,33,White,Male,Child,5,1,MultVic,Yes,0,Yes,Parent,1
+14-12,2014-09-01,Yes,Columbia,SC,Southeast,,,Custodial,3,White,Male,,33,White,Male,Child,5,1,MultVic,Yes,0,No,Parent,1
+14-12,2014-09-01,Yes,Columbia,SC,Southeast,,,Custodial,5,White,Male,,33,White,Male,Child,5,1,MultVic,Yes,0,No,Parent,1
+14-12,2014-09-01,Yes,Columbia,SC,Southeast,,,Custodial,6,White,Male,,33,White,Male,Child,5,1,MultVic,Yes,0,No,Parent,1
+14-12,2014-09-01,Yes,Columbia,SC,Southeast,,,Custodial,7,White,Female,,33,White,Male,Child,5,1,MultVic,Yes,0,No,Parent,1
+14-13,2013-10-01,Yes,Detroit,MI,Central,Rural,1-10 miles,Unknown,2,White,Female,,,,,,1,1,SingleVO,No,0,Yes,,
+14-14,2014-05-01,Yes,Detroit,MI,Central,Rural,1-10 miles,Possible false allegation,2,Black,Male,,,,,,1,1,SingleVO,No,0,Yes,,
+14-15,2014-05-01,No,Detroit,MI,Central,Suburban,<1 mile,,0.5,White,Female,,52,White,Male,Stranger,1,1,SingleVO,No,0,Yes,Stranger,1
+14-16,2014-03-01,Yes,Detroit,MI,Central,City,,Custodial,0.5,Black,Female,,20,Black,Male,Child,1,2,MultOff,No,0,Yes,Parent,1
+14-16,2014-03-01,Yes,Detroit,MI,Central,City,,Custodial,0.5,Black,Female,,19,Black,Male,Acquaintance,1,2,MultOff,No,0,No,Known,1
+14-17,2014-05-01,No,Detroit,MI,Central,City,,Custodial,2,Black,Female,,22,Black,Male,Child,1,1,SingleVO,No,0,Yes,Parent,1
+14-18,2014-06-01,Yes,Detroit,MI,Central,,,,6,Black,Female,,28,Black,Male,Child,2,1,MultVic,No,0,Yes,Parent,1
+14-18,2014-06-01,Yes,Detroit,MI,Central,,,,0.5,Black,Male,,28,Black,Male,Child,2,1,MultVic,No,0,No,Parent,1
+14-19,2014-06-01,Yes,Detroit,MI,Central,City,,Unknown,12,Black,Male,,,,,,1,1,SingleVO,No,0,Yes,,
+14-20,2013-11-01,,Dallas,TX,Central,Rural,,,6,White,Female,,45,White,Male,Stranger,1,1,SingleVO,No,0,Yes,Stranger,1
+14-22,2014-03-01,No,Denver,CO,West,,,Unknown,,Hispanic,Male,,,Hispanic,Male,Otherwise Known,1,1,SingleVO,No,0,Yes,Known,1
+14-24,2014-04-01,Yes,Houston,TX,Central,City,,Sexual,14,,Female,,51,,Male,Friend,1,1,SingleVO,Yes,0,Yes,Known,
+14-25,2014-08-01,Yes,Indianapolis,IN,Central,City,,Unknown,0.5,Black,Male,,,White,Male,Stranger,1,2,MultOff,No,0,Yes,Stranger,0
+14-25,2014-08-01,Yes,Indianapolis,IN,Central,City,,Unknown,0.5,Black,Male,,,Hispanic,Male,Stranger,1,2,MultOff,No,0,No,Stranger,0
+14-26,2013-11-01,Yes,Jackson,MS,Central,City,1-10 miles,Unknown,7,Black,Male,No,42,Black,Male,Child,1,2,MultOff,Yes,0,Yes,Parent,1
+14-26,2013-11-01,Yes,Jackson,MS,Central,City,1-10 miles,Unknown,7,Black,Male,No,30,Black,Male,Acquaintance,1,2,MultOff,Yes,0,No,Known,1
+14-27,2014-03-01,Yes,Jackson,MS,Central,,,Unknown,2,Unknown,Female,,,,,,1,1,SingleVO,No,0,Yes,,
+14-28,2014-04-01,Yes,Jackson,MS,Central,City,,Unknown,11,Unknown,Male,,,,,,1,1,SingleVO,No,0,Yes,,
+14-29,2014-07-01,Yes,Jackson,MS,Central,,,Sexual,5,Black,Female,,29,Hispanic,Male,Neighbor,1,2,MultOff,Yes,0,Yes,Known,0
+14-29,2014-07-01,Yes,Jackson,MS,Central,,,Sexual,5,Black,Female,,31,White,Male,Neighbor,1,2,MultOff,Yes,0,No,Known,0
+14-30,2013-12-01,Yes,Kansas City,MO,Central,,,Custodial,6,Black,Male,No,40,Black,Male,Child of Boyfriend/Girlfriend,1,1,SingleVO,Yes,0,Yes,Known,1
+14-31,2014-01-01,Yes,Kansas City,MO,Central,,>10 miles,Custodial,0.5,Unknown,Male,No,34,,Male,Child,1,2,MultOff,No,0,Yes,Parent,
+14-31,2014-01-01,Yes,Kansas City,MO,Central,,>10 miles,Custodial,0.5,Unknown,Male,,30,,Female,Child,1,2,MultOff,No,0,No,Parent,
+14-32,2014-02-01,Yes,Kansas City,MO,Central,City,>10 miles,Custodial,11,White,Female,No,45,White,Male,Child,1,1,SingleVO,No,0,Yes,Parent,1
+14-33,2014-02-01,Yes,Kansas City,MO,Central,City,>10 miles,Custodial,5,White,Female,,30,Black,Male,Child of Boyfriend/Girlfriend,1,1,SingleVO,Yes,0,Yes,Known,0
+14-81,,No,Kansas City,MO,Central,Rural,>10 miles,Custodial,,White,Female,,25,White,Male,Child,1,1,SingleVO,No,0,Yes,Parent,1
+14-34,2014-08-01,Yes,Kansas City,MO,Central,City,>10 miles,Sexual,8,Unknown,Female,,28,Black,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,
+14-35,2013-10-01,No,Los Angeles,CA,West,City,>10 miles,Intent to Keep,1,Black,Male,,47,Black,Female,,1,1,SingleVO,No,0,Yes,,1
+14-36,2014-02-01,Yes,Los Angeles,CA,West,,,Custodial,1,White,Female,No,32,White,Female,Child,2,2,MultOV,No,0,Yes,Parent,1
+14-36,2014-02-01,Yes,Los Angeles,CA,West,,,Custodial,3,White,Male,No,32,White,Female,Child,2,2,MultOV,No,0,No,Parent,1
+14-38,2013-10-01,No,Little Rock,AR,Central,Rural,>10 miles,Unknown,5,White,Male,,25,White,Female,Child,1,1,SingleVO,No,0,Yes,Parent,1
+14-39,2013-11-01,Yes,Little Rock,AR,Central,City,>10 miles,Custodial,13,White,Female,,38,White,Male,Other Family Member,1,1,SingleVO,No,0,Yes,Family,1
+14-41,2014-09-01,Yes,Little Rock,AR,Central,City,,,15,White,Female,,,,,,1,1,SingleVO,No,0,Yes,,
+14-42,2014-01-01,Yes,Memphis,TN,Central,City,>10 miles,Custodial,6,White,Female,,30,White,Female,Child,1,1,SingleVO,No,0,Yes,Parent,1
+14-43,2014-04-01,,Miami,FL,Southeast,City,Attempted.,Sexual,13,Black,Female,Yes,76,White,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,0
+14-44,2014-05-01,Yes,Miami,FL,Southeast,City,Unknown,Custodial,2,Black,Female,,37,Black,Female,Other Family Member,1,1,SingleVO,No,0,Yes,Family,1
+14-45,2013-12-01,Yes,Mobile,AL,Southeast,Suburban,>10 miles,Custodial,9,White,Female,,30,White,Female,Child,1,1,SingleVO,No,0,Yes,Parent,1
+14-46,2014-09-01,Yes,Mobile,AL,Southeast,Rural,,Sexual,9,Black,Female,No,38,Black,Male,Child,1,1,SingleVO,Yes,0,Yes,Parent,1
+14-47,2013-11-01,Yes,Milwaukee,WI,Central,,,,14,White,Female,,,,,,1,1,SingleVO,No,0,Yes,,
+14-48,2014-02-01,Yes,Milwaukee,WI,Central,Suburban,>10 miles,Unknown,0.2,Black,Male,,32,Black,Female,Other Family Member,1,1,SingleVO,Yes,0,Yes,Family,1
+14-49,2013-10-01,No,Norfolk,CT,Northeast,,,,11,White,Female,,,,,,1,1,SingleVO,No,0,Yes,,
+14-50,2014-09-01,Yes,New Haven,CT,Northeast,City,>10 miles,Unknown,14,Hispanic,Female,,53,White,Male,Stranger,1,1,SingleVO,No,0,Yes,Stranger,0
+14-51,2014-07-01,Yes,New Orleans,LA,Central,Rural,>10 miles,Unknown,12,Black,Female,No,43,Black,Male,Stepchild,1,1,SingleVO,Yes,0,Yes,Parent,1
+14-52,2013-11-01,No,Oklahoma City,OK,Central,City,>10 miles,Unknown,13,Hispanic,Female,No,58,Hispanic,Female,Grandchild,1,1,SingleVO,No,0,Yes,Family,1
+14-53,2014-05-01,Yes,Oklahoma City,OK,Central,City,1-10 miles,Sexual,8,White,Female,Yes,33,White,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,1
+14-54,2013-12-01,Yes,Portland,OR,West,City,,Sexual,13,White,Female,No,40,White,Male,Friend,1,1,SingleVO,Yes,0,Yes,Known,1
+14-55,2014-05-01,Yes,Phoenix,AZ,West,,,Intent to Keep,2,Native American,Male,No,19,Native American,Female,Other Family Member,1,1,SingleVO,No,0,Yes,Family,1
+14-56,2014-06-01,Yes,Phoenix,AZ,West,Suburban,<1 mile,Sexual,8,White,Female,,26,White,Male,Acquaintance,1,1,SingleVO,Yes,0,Yes,Known,1
+14-57,2014-02-01,Yes,Richmond,VA,Southeast,City,,Unknown,5,Black,Female,No,21,Black,Female,Other Family Member,1,1,SingleVO,No,0,Yes,Family,1
+14-58,2014-08-01,Yes,Richmond,VA,Southeast,City,,Custodial,,White,Male,No,40,White,Female,Child,1,1,SingleVO,No,0,Yes,Parent,1
+14-59,2014-09-01,No,San Antonio,TX,Central,City,,Custodial,5,Hispanic,Female,,,,,Child,1,1,SingleVO,No,0,Yes,Parent,
+14-61,2013-12-01,Yes,Sacramento,CA,West,,,Custodial,5,White,Male,No,36,White,Female,Child,2,1,MultVic,No,0,Yes,Parent,1
+14-61,2013-12-01,Yes,Sacramento,CA,West,,,Custodial,7,White,Male,No,36,White,Female,Child,2,1,MultVic,No,0,No,Parent,1
+14-62,2014-04-01,No,Sacramento,CA,West,,,Unknown,3,Hispanic,Female,,0,Hispanic,,Stranger,1,1,SingleVO,No,0,Yes,Stranger,1
+14-63,2014-06-01,Yes,Sacramento,CA,West,Suburban,,,3,White,Male,,37,White,Female,Stepchild,1,1,SingleVO,No,0,Yes,Parent,1
+14-64,2014-08-01,Yes,Sacramento,CA,West,,,Custodial,10,Hispanic,Female,,36,Hispanic,Female,Child,1,1,SingleVO,No,0,Yes,Parent,1
+14-67,2013-11-01,No,San Diego,CA,West,City,,Custodial,2,Unknown,Male,,45,,Male,Child,1,1,SingleVO,No,0,Yes,Parent,
+14-68,2014-01-01,Yes,Seattle,WA,West,City,1-10 miles,Custodial,5,White,Male,,31,White,Male,Child,1,2,MultOff,Yes,0,Yes,Parent,1
+14-68,2014-01-01,Yes,Seattle,WA,West,City,1-10 miles,Custodial,5,White,Male,,36,White,Female,Child,1,2,MultOff,Yes,0,No,Parent,1
+14-69,2014-02-01,Yes,Seattle,WA,West,,,Custodial,0.2,White,Male,No,31,White,Female,Child,1,1,SingleVO,No,0,Yes,Parent,1
+14-70,2014-02-01,Yes,Seattle,WA,West,,,Custodial,2,Black,Male,No,25,Black,Female,Child,2,1,MultVic,No,0,Yes,Parent,1
+14-70,2014-02-01,Yes,Seattle,WA,West,,,Custodial,1,Black,Female,No,25,Black,Female,Child,2,1,MultVic,No,0,No,Parent,1
+14-71,2014-08-01,Yes,Seattle,WA,West,,,,6,,Female,,,,,,1,1,SingleVO,No,0,Yes,,
+14-72,2014-01-01,Yes,San Fransisco,CA,West,,,Sexual,7,Asian,Female,,40,White,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,0
+14-76,2014-03-01,No,Tampa,FL,Southeast,,,Sexual,14,White,Female,Yes,25,White,Male,Stranger,1,1,SingleVO,Yes,0,Yes,Stranger,1
+14-77,2014-05-01,Yes,Tampa,FL,Southeast,City,,Sexual,9,Black,Female,No,35,Black,Male,Acquaintance,1,1,SingleVO,Yes,0,Yes,Known,1
+14-79,2014-08-01,Yes,Tampa,FL,Southeast,,,Custodial,4,Unknown,Male,No,28,,Male,Child,1,1,SingleVO,Yes,0,Yes,Parent,
+14-80,2014-03-01,Yes,Washington Field,,Southeast,City,,Unknown,8,Black,Female,No,51,Black,Male,Acquaintance,1,1,SingleVO,No,0,Yes,Known,1
+14-1,2014-08-01,Yes,Alabama,AL,Southeast,Rural,,Sexual,6,White,Female,,25,White,Female,,2,2,MultOV,Yes,0,Yes,,1
+14-1,2014-08-01,Yes,Alabama,AL,Southeast,Rural,,Sexual,12,White,Female,,25,White,Female,,2,2,MultOV,Yes,0,No,,1
+14-36,2014-02-01,Yes,Los Angeles,CA,West,,,Custodial,1,White,Female,No,31,White,Male,Child,2,2,MultOV,No,0,Yes,Parent,1
+14-36,2014-02-01,Yes,Los Angeles,CA,West,,,Custodial,3,White,Male,No,31,White,Male,Child,2,2,MultOV,No,0,No,Parent,1
