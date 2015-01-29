@@ -2,20 +2,20 @@ library(DMwR)
 library(performanceEstimation)
 library(rpart)
 
-data.final <- read.csv("NIBRS_cleaned_notfilled.csv")
+data.final <- read.csv("NIBRS_cleaned_notfilled_opt3.csv")
 
 
 
 # Clustering --------------------------------------------------------------
 
-values <- data.final[,c('population.quartile','incident.hour','completed','victim.age','victim.sex',
+values <- data.final[,c('population.group','incident.hour','completed','victim.age','victim.sex',
                         'victim.race','offender.age','offender.sex',
                         'offender.race','multiple.victims','multiple.offenders',
-                        'relationship.group','division.name','location.group','same.race','target.harm')]
+                        'relationship.group','division.name','loc.group','same.race','target.harm')]
 
 current.na.action <- options('na.action')
 options(na.action='na.pass')
-x1 <- as.data.frame(model.matrix(~population.quartile - 1, data.final))
+x1 <- as.data.frame(model.matrix(~population.group - 1, data.final))
 x2 <- as.data.frame(model.matrix(~completed - 1, data.final))
 x3 <- as.data.frame(model.matrix(~victim.sex - 1, data.final))
 x4 <- as.data.frame(model.matrix(~victim.race - 1, data.final))
@@ -23,7 +23,7 @@ x5 <- as.data.frame(model.matrix(~offender.sex - 1, data.final))
 x6 <- as.data.frame(model.matrix(~offender.race - 1, data.final))
 x7 <- as.data.frame(model.matrix(~relationship.group - 1, data.final))
 x8 <- as.data.frame(model.matrix(~division.name - 1, data.final))
-x9 <- as.data.frame(model.matrix(~location.group - 1, data.final))
+x9 <- as.data.frame(model.matrix(~loc.group - 1, data.final))
 x10 <- as.data.frame(model.matrix(~offender.sex - 1, data.final))
 # add others here using froamework above
 data.clustering <- cbind(values[,c(2,3,4,7,10,11,15,16)],x1,x3,x4,x5,x6,x7,x9)
@@ -43,7 +43,7 @@ plot(1:20, wss, type="b", xlab="Number of Clusters",
      ylab="Within groups sum of squares")
 
 
-cluster <- kmeans(values.s, 10, nstart=25)
+cluster <- kmeans(values.s, 20, nstart=25)
 
 cluster$size
 cluster$centers
@@ -149,19 +149,22 @@ auc <- unlist(slot(auc, "y.values"))
 
 
 ### test individual basic models before running performance estimation
-trPerc = .90
-idx <- sample(1:nrow(data.m),as.integer(trPerc*nrow(data.m)))
+trPerc = .80
+idx <- sample(1:nrow(data.m3),as.integer(trPerc*nrow(data.m3)))
 
-holdout <- data.m[-idx,]
+holdout <- data.m3[-idx,]
 
-data.smote <- SMOTE(target.harm ~ ., data.m[idx,], perc.over = 100)
+data.smote <- SMOTE(target.harm ~ ., data.m3[idx,], perc.over = 100)
 table(data.smote$target.harm)
+train <- data.smote
 
 trPerc = .9
 idx2 <- sample(1:nrow(data.smote),as.integer(trPerc*nrow(data.smote)))
 
 train <- data.smote[idx2,]
 test <- data.smote[-idx2,]
+
+
 
 # svm model evaluation and holdout analysis (non-sampled data)
 model.svm <- svm(target.harm ~ ., data=train)
@@ -174,7 +177,8 @@ classificationMetrics(holdout$target.harm,pred.svm,stats=c("rec","prec","F"), po
 table(holdout[,ncol(holdout)], pred.svm)
 
 # RF model evaluation and holdout analysis (non-sampled data)
-model.rf <- randomForest(target.harm ~ ., data=train)
+test.num <- 2000
+model.rf <-randomForest(target.harm ~ ., data=train, ntree=500, nodesize=2, cutoff=c(0.3,0.7), strata=train$type, sampsize=c(SingleVO=.725*test.num, MultVic=.15*test.num, MultOff=.1*test.num, MultOV=.025*test.num))
 pred.rf <- predict(model.rf, test[,-ncol(test)])
 classificationMetrics(test$target.harm,pred.rf,stats=c("rec","prec","F"),posClass='1')
 table(test[,ncol(test)], pred.rf)
