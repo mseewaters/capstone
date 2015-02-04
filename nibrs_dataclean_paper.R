@@ -12,22 +12,22 @@ names.data <- c('SEGMENT', 'STATE', 'ORI', 'INCNUM', 'INCDATE', 'B1006', 'B1007'
                 'B1009', 'B1010', 'B1011', 'B2005', 'B2006', 'B3024', 'V1006', 
                 'V1007', 'V20061', 'V20062', 'V20063', 'V20071', 'V20072', 'V20073', 
                 'V20111', 'V20171', 'V20172', 'V40181', 'V40182', 'V40183', 'V40191', 
-                'V40192', 'V40193', 'V40201', 'V40202', 'V40203',
+                'V40192', 'V40193', 'V40201', 'V40202', 'V40203', 'V40211', 'V40212', 'V40213',
                 'V40221', 'V40222', 'V40223', 'V40231', 'V40232', 'V40261', 'V40262', 
-                'V40263', 'V40311', 'V40312', 'V40313', 'V40321', 'V40322', 'V40323', 
-                'V40331', 'V40332', 'V40333', 'V40341', 'V40342', 'V40343', 'V50071', 
-                'V50072', 'V50081', 'V50082', 'V50091', 'V50092', 'V60081', 'V60082', 
+                'V40263', 'V40321', 'V40322', 'V40323', 'V40341', 'V40342', 'V40343', 'V40361', 'V40362', 'V40363',
+                'V50071', 'V50072', 'V50073','V50081', 'V50082', 'V50083','V50091', 'V50092','V50093', 'V60081', 'V60082', 
                 'V60091', 'V60092', 'V60111', 'V60112')
 
 colnames(data.raw) <- names.data
 
+table(data.raw$V20061)
 
-# Filter for all victims age <= 15 and Relationship (NIBRS definition)
+# Filter for all victims age <= 17 and Relationship (NIBRS definition)
 data1 <- data.raw
 m <- data1[,c("V40181","V40182","V40183")]
 data1$agemax <- apply(m,1,max,na.rm=TRUE)
 
-data.c <- subset(data1, agemax <= 15 & V50071 >= 16 & V40321 %in% c(4,5,7,10,11,12,14,15,16,17,19,24,25,-9,-8,-7), na.rm=TRUE)
+data.c <- subset(data1, agemax <= 17 & (V50071 >= 18 | V50071 < 0) & V40321 %in% c(4,5,7,10,11,12,14,15,16,17,19,24,25,-9,-8,-7), na.rm=TRUE)
 
 #Change "Force" values other and none to smaller values to help with aggregation later
 data.c$V20171[which(data.c$V20171>=900)] <- 1
@@ -54,34 +54,67 @@ sum(data.c$target)
 
 data.c$time.arrest <- as.numeric(round(difftime(strptime(data.c$V60081, format="%Y%m%d"), strptime(data.c$INCDATE, format="%Y%m%d"), units='weeks'),1))
 
+# Add in groupings
+data.c$VNumVG <- ifelse(data.c$V40182==-6 | data.c$V40182==-8, 1, ifelse(data.c$V40183==-6 | data.c$V40183==-8,2,3))
+data.c$VNumOG <- ifelse(data.c$V50072==-6 | data.c$V50072==-8, 1, ifelse(data.c$V50073==-6 | data.c$V50073==-8,2,3))
+
+data.c$type <- as.factor(ifelse(data.c$VNumVG==1 & data.c$VNumOG==1, 'SingleVO', 
+                                ifelse(data.c$VNumVG>1 & data.c$VNumOG==1, 'MultVic',
+                                       ifelse(data.c$VNumVG==1 & data.c$VNumOG>1, 'MultOff',
+                                              ifelse(data.c$VNumVG>1 & data.c$VNumOG>1, 'MultVO', NA)))))
+
+prop.table(table(data.c$type))
+
+
+#Identify incidents where limited personal information is provided
+row.fill <- data.c[,c('V40191','V40201','V50071','V50081','V50091','V40321')]
+numNAs <- apply(row.fill, 1, function(z) sum(ifelse(z<0,1,0)))
+table(numNAs)
+data.c <- data.c[which(numNAs < 4),]
+
 
 # Reclass variety of unknowns to NA
 data <- as.data.frame(lapply(data.c, function(x){replace(x ,x < 0, NA)}))                   
+colnames(data)
 
 # Count NA by variable and isolate fields with at least 1 NA
-namemap <- read.csv("D:/0 Stern MSBA/0.2 Abduction/abduction2/fieldnamemap.csv")
+
+names.data <- c('SEGMENT', 'STATE', 'ORI', 'INCNUM', 'INCDATE', 'B1006', 'B1007', 
+                'B1009', 'B1010', 'B1011', 'B2005', 'B2006', 'B3024', 'V1006', 
+                'V1007', 'V20061', 'V20062', 'V20063', 'V20071', 'V20072', 'V20073', 
+                'V20111', 'V20171', 'V20172', 'V40181', 'V40182', 'V40183', 'V40191', 
+                'V40192', 'V40193', 'V40201', 'V40202', 'V40203', 'V40211', 'V40212', 'V40213',
+                'V40221', 'V40222', 'V40223', 'V40231', 'V40232', 'V40261', 'V40262', 
+                'V40263', 'V40321', 'V40322', 'V40323', 'V40341', 'V40342', 'V40343', 'V40361', 'V40362', 'V40363',
+                'V50071', 'V50072', 'V50073','V50081', 'V50082', 'V50083','V50091', 'V50092','V50093', 'V60081', 'V60082', 
+                'V60091', 'V60092', 'V60111', 'V60112', 
+                'agemax', 'targ1','target','time.arrest', 'VNumVG', 'VNumOG', 'type')
+
 data.empty = NULL
-for (i in 1:length(data.raw))
+for (i in 1:length(data))
 {
-  data.empty[i] <- length(which(is.na(data[i])))  
+  data.empty[i] <- length(which(is.na(data[i])))
 }
 
-x <- merge(as.data.frame(cbind(names.data, data.empty)), namemap, by='names.data')
-x <- x[order(-data.empty),]
+x <- as.data.frame(cbind(data.empty, names.data))[order(-data.empty),]
 x <- x[which(x$data.empty != 0),]
 x
 
-# Add in groupings
-data$VNumVG <- as.factor(ifelse(!is.na(data$V40182), "Multiple Victims", "Single Victim"))
-data$VNumOG <- as.factor(ifelse(!is.na(data$V40331), "Multiple Offenders", "Single Offender"))
 
-data.t <- data[,-which(names(data) %in% x[c(1:33,35:36),1])]
+
+data.t <- data[,-which(names(data) %in% x[c(1:39),2])]
 
 data.t$V40181G <- cut(data.t$V40181, 
                       breaks=c(-0.5,5.5,10.5,Inf), 
                       labels=c('0-5','6-10','11-15'))
 
 table(data.t$V40181G)
+
+data.t$victimtenderage.group <- cut(data.t$V40181, 
+                                    breaks=c(-0.5,12.5,Inf), 
+                                    labels=c('Yes','No'))
+
+table(data.t$victimtenderage.group)
 
 data.t$V50071G <- cut(data.t$V50071,
                       breaks=c(0,20,30,40,50,Inf), 
@@ -124,10 +157,10 @@ colnames(data.graph)
 fullnames.data <- c('state','originating.agency', 'incident.number', 'incident.date', 'date.agency.went.NIBRS',
                     'city', 'country.division', 'country.region', 'current.population', 
                     'UCR.county', 'FIPS.county', 'report.date', 'incident.hour', 'UCR.code', 
-                    'completed', 'location', 'Weapon.force', 'victim.age', 'victim.sex', 
-                  'victim.race', 'victim.residency', 'injury', 'relationship',
-                  'offender.age', 'offender.sex', 'offender.race','arrest.date','target.harm','target.arrest','multiple.victims',
-                  'multiple.offenders','victimage.group','offenderage.group','population.group',
+                    'completed', 'location', 'force.used', 'victim.age', 'victim.sex', 
+                  'victim.race', 'victim.ethnicity','victim.residency', 'injury', 'relationship',
+                  'offender.age', 'offender.sex', 'offender.race','target.harm','target.arrest','multiple.victims',
+                  'multiple.offenders','type','victimage.group','victim.tenderage','offenderage.group','population.group',
                 'relationship.group','hour.group')
 
 colnames(data.graph) <- fullnames.data
@@ -147,7 +180,7 @@ locmap <- read.csv("D:/0 Stern MSBA/0.2 Abduction/abduction2/locmap.csv")
 data.merge <- merge(data.merge, locmap, by='location',all.x=TRUE)
 
 weaponmap <- read.csv("D:/0 Stern MSBA/0.2 Abduction/abduction2/weaponmap.csv")
-data.merge <- merge(data.merge, weaponmap, by='Weapon.force',all.x=TRUE)
+data.merge <- merge(data.merge, weaponmap, by='force.used',all.x=TRUE)
 
 injmap <- read.csv("D:/0 Stern MSBA/0.2 Abduction/abduction2/injmap.csv")
 data.merge <- merge(data.merge, injmap, by='injury',all.x=TRUE)
@@ -163,7 +196,7 @@ data.merge$offender.race <- factor(data.merge$offender.race, labels=c('white','b
 data.merge$victim.residency <- factor(data.merge$victim.residency, labels=c('non-resident','resident'))
 
 data.merge$FIPS <- sprintf("%02d%03d",data.merge$state, data.merge$FIPS.county)
-data.final <- data.merge[,-which(names(data.merge) %in% c('relationship','injury','Weapon.force','location',
+data.final <- data.merge[,-which(names(data.merge) %in% c('relationship','injury','force.used','location',
                                                           'country.region', 'country.division',
                                                           'state','report.date'))]
 
