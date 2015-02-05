@@ -200,16 +200,20 @@ table(holdout[,ncol(holdout)], pred.nb)
 
 
 # generic model evaluation and holdout analysis (non-sampled data)
-model.gen <- ctree(target.harm ~ ., data=train)
-pred.gen <- predict(model.gen, test[,-ncol(test)], type='response')
-classificationMetrics(test$target.harm,pred.gen,stats=c("rec","prec","F"),posClass='1')
-table(test[,ncol(test)], pred.gen)
+model.gen <- ada(target.harm ~ ., data=train, loss="e")
+#pred.gen <- predict(model.gen, test[,-ncol(test)], type='response')
+#classificationMetrics(test$target.harm,pred.gen,stats=c("rec","prec","F"),posClass='1')
+#table(test[,ncol(test)], pred.gen)
 
-pred.gen <- predict(model.gen, holdout[,-ncol(holdout)], type='response')
+pred.gen <- predict(model.gen, holdout[,-ncol(holdout)])
 classificationMetrics(holdout$target.harm,pred.gen,stats=c("rec","prec","F"), posClass='1')
 table(holdout[,ncol(holdout)], pred.gen)
 
-
+confusion <- function(a, b){
+  tbl <- table(a, b)
+  mis <- 1 - sum(diag(tbl))/sum(tbl)
+  list(table = tbl, misclass.prob = mis)
+}
 # Optimized by evaluate upsampling and different model parameters
 
 data.smote.f <- SMOTE(target.harm ~ ., data.m, perc.over = 100)
