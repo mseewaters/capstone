@@ -1,4 +1,4 @@
 capstone
 ========
 
-full capstone repository
+working documents
